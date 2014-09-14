@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    UIImagePickerController *picker;
+    UIImagePickerController *picker2;
+    UIImage *image;
+    IBOutlet UIImageView *imageView;
+    float firstX;
+    float firstY;
+}
+
+@property (weak, nonatomic) IBOutlet UITextField *TextF;
+
+
+- (IBAction)btnCaptureImageClicked:(id)sender;
+- (IBAction)TakePhoto;
+- (IBAction)ChooseExisting;
+- (IBAction)Submit:(id)sender;
+- (IBAction)textFieldReturn:(id)sender;
 
 @end
