@@ -101,12 +101,12 @@
     UIAlertView *alertView;
     if(!error)
     {
-        alertView=[[UIAlertView alloc]initWithTitle:@"Error" message:@"Error Occured" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        alertView=[[UIAlertView alloc]initWithTitle:@"Success" message:@"Your image has been saved successfully to your photo album." delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alertView show];
     }
     else
     {
-        alertView=[[UIAlertView alloc]initWithTitle:@"Success" message:@"Your image has been saved successfully to your photo album." delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        alertView=[[UIAlertView alloc]initWithTitle:@"Error" message:@"Error Occured" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alertView show];
     }
 }

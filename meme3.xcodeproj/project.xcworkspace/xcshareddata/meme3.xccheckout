@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0510AC23-39CD-42F3-80E2-A3478D53E153</string>
+	<key>IDESourceControlProjectName</key>
+	<string>meme3</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>33DB097B-F67D-4A73-9BA4-9B8B7C59A986</key>
+		<string>https://github.com/ploidt/meme3.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>meme3.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>33DB097B-F67D-4A73-9BA4-9B8B7C59A986</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ploidt/meme3.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>33DB097B-F67D-4A73-9BA4-9B8B7C59A986</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>33DB097B-F67D-4A73-9BA4-9B8B7C59A986</string>
+			<key>IDESourceControlWCCName</key>
+			<string>meme3</string>
+		</dict>
+	</array>
+</dict>
+</plist>
