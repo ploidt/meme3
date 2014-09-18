@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+
 -(IBAction)textFieldReturn:(id)sender
 {
     [_TextF resignFirstResponder];
@@ -31,6 +32,7 @@
     
     [myLabel addGestureRecognizer:panGesture];
     panGesture = nil;
+    
 
 }
 
@@ -82,7 +84,10 @@
     }
     translatedPoint = CGPointMake(firstX+translatedPoint.x, firstY+translatedPoint.y);
     [[sender view] setCenter:translatedPoint];
+    
 }
+
+
 
 -(UIImage *)createImage:(UIImageView *)imgView
 {
