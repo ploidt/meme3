@@ -16,6 +16,22 @@
 -(IBAction)textFieldReturn:(id)sender
 {
     [_TextF resignFirstResponder];
+    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 250, 40)];
+    myLabel.text = _TextF.text.uppercaseString;
+    myLabel.textColor = [UIColor whiteColor];
+    myLabel.font = [UIFont fontWithName:@"Arial" size:32];
+    myLabel.shadowColor = [UIColor blackColor];
+    myLabel.shadowOffset = CGSizeMake(-1, -1);
+    [imageView addSubview:myLabel];
+    [imageView setUserInteractionEnabled:YES];
+    [myLabel setUserInteractionEnabled:YES];
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [panGesture setMinimumNumberOfTouches:1];
+    [panGesture setMaximumNumberOfTouches:1];
+    
+    [myLabel addGestureRecognizer:panGesture];
+    panGesture = nil;
+
 }
 
 - (IBAction)TakePhoto {
@@ -34,24 +50,6 @@
     //[picker2 release];
 }
 
-- (IBAction)Submit:(id)sender {
-    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 250, 40)];
-    myLabel.text = _TextF.text.uppercaseString;
-    myLabel.textColor = [UIColor whiteColor];
-    myLabel.font = [UIFont fontWithName:@"Arial" size:32];
-    myLabel.shadowColor = [UIColor blackColor];
-    myLabel.shadowOffset = CGSizeMake(-1, -1);
-    [imageView addSubview:myLabel];
-    [imageView setUserInteractionEnabled:YES];
-    [myLabel setUserInteractionEnabled:YES];
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-    [panGesture setMinimumNumberOfTouches:1];
-    [panGesture setMaximumNumberOfTouches:1];
-    
-    [myLabel addGestureRecognizer:panGesture];
-    panGesture = nil;
-    
-}
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     image = [info objectForKey:UIImagePickerControllerOriginalImage];

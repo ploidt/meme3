@@ -23,7 +23,6 @@
 - (IBAction)btnCaptureImageClicked:(id)sender;
 - (IBAction)TakePhoto;
 - (IBAction)ChooseExisting;
-- (IBAction)Submit:(id)sender;
 - (IBAction)textFieldReturn:(id)sender;
 
 @end
