@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic,strong) UIPopoverController *popOver;
+
 @end
 
 @implementation ViewController
@@ -20,9 +22,9 @@
     UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 250, 40)];
     myLabel.text = _TextF.text.uppercaseString;
     myLabel.textColor = [UIColor whiteColor];
-    myLabel.font = [UIFont fontWithName:@"Arial" size:32];
+    myLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:38];
     myLabel.shadowColor = [UIColor blackColor];
-    myLabel.shadowOffset = CGSizeMake(-1, -1);
+    myLabel.shadowOffset = CGSizeMake(-2, -1);
     [imageView addSubview:myLabel];
     [imageView setUserInteractionEnabled:YES];
     [myLabel setUserInteractionEnabled:YES];
@@ -35,6 +37,7 @@
     
 
 }
+
 
 - (IBAction)TakePhoto {
     picker = [[UIImagePickerController alloc] init];
@@ -67,6 +70,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIPanGestureRecognizer * panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [self.sticker addGestureRecognizer:panRecognizer];
+
+}
+
+- (IBAction)showActivityView:(UIBarButtonItem *)sender {
+    NSArray *itemsToShare = @[image];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (IBAction)btnCaptureImageClicked:(id)sender
@@ -85,6 +98,11 @@
     translatedPoint = CGPointMake(firstX+translatedPoint.x, firstY+translatedPoint.y);
     [[sender view] setCenter:translatedPoint];
     
+}
+
+- (void)handlePanGesture2:(UIPanGestureRecognizer *)gestureRecognizer
+{
+    self.sticker.center = [gestureRecognizer locationInView:self.sticker.superview];
 }
 
 

@@ -456,6 +456,7 @@
 				62B28EE019C5E985002B7F32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62B28EE119C5E985002B7F32 /* Build configuration list for PBXNativeTarget "meme3Tests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				62B28EE319C5E985002B7F32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

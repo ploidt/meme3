@@ -48,7 +48,7 @@
                                     <outlet property="delegate" destination="kh9-bI-dsS" id="KVN-Mf-Gmf"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1J-Bf-Kpx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1J-Bf-Kpx">
                                 <rect key="frame" x="0.0" y="139" width="320" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -61,16 +61,32 @@
                                             <action selector="btnCaptureImageClicked:" destination="vXZ-lx-hvc" id="bt8-fd-H9d"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Import Meme Face" id="vTc-16-MjZ"/>
-                                    <barButtonItem title="Share" width="79" id="4fk-Vf-CHF"/>
+                                    <barButtonItem title="Import Meme Face" id="vTc-16-MjZ">
+                                        <connections>
+                                            <action selector="displayPopover:" destination="vXZ-lx-hvc" id="Uj5-5H-MyS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Share" width="79" id="4fk-Vf-CHF">
+                                        <connections>
+                                            <action selector="showActivityView:" destination="vXZ-lx-hvc" id="geM-vR-dqS"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-41-y5b">
+                                <rect key="frame" x="20" y="335" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="uhihhi">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="TextF" destination="Kbe-kF-M2f" id="8wA-08-ehn"/>
                         <outlet property="imageView" destination="m1J-Bf-Kpx" id="Men-Kn-Z3I"/>
+                        <outlet property="sticker" destination="kNf-41-y5b" id="5h8-09-GmS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

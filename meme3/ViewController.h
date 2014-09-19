@@ -18,8 +18,10 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *TextF;
+@property (weak, nonatomic) IBOutlet UIImageView *sticker;
 
 
+- (IBAction)showActivityView:(UIBarButtonItem *)sender;
 - (IBAction)btnCaptureImageClicked:(id)sender;
 - (IBAction)TakePhoto;
 - (IBAction)ChooseExisting;
